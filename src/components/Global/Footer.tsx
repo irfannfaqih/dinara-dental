@@ -29,7 +29,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="space-y-6">
             <Image
-              src="/logo.png"
+              src="/Logo.png"
               alt="Dinara Dental Care"
               width={200}
               height={70}
