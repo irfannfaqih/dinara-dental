@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   title: "Dinara Dental Care | Banjarmasin",
   description: "Klinik Gigi Premium di Banjarmasin dengan layanan terbaik. Keunggulan layanan gigi dengan teknologi modern.",
   icons: {
-    icon: "/favicon-white.png",
+    icon: "/logo-browser.png",
   },
 };
 
