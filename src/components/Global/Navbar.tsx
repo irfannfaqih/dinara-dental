@@ -35,9 +35,9 @@ export default function Navbar() {
           <div className="w-[110px] sm:w-[200px] flex items-center justify-start">
             <a href="#" className="flex items-center group">
               <Image
-                src="/logo-browser.png"
+                src="/logo.png"
                 alt="Dinara Dental Care"
-                width={40}
+                width={120}
                 height={40}
                 className="h-8 sm:h-10 w-auto object-contain mix-blend-multiply transition-transform duration-300 group-hover:scale-105"
               />
