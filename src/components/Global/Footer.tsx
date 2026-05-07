@@ -1,13 +1,14 @@
 import { MapPin, Phone, Clock } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import React from "react";
 
-const InstagramIcon = (props: any) => (
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width={props.width || "24"}
+    height={props.height || "24"}
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -44,7 +45,7 @@ export default function Footer() {
                 rel="noopener noreferrer"
                 className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-dinara-accent transition-all duration-300"
               >
-                <InstagramIcon size={20} />
+                <InstagramIcon width={20} height={20} />
               </a>
             </div>
           </div>

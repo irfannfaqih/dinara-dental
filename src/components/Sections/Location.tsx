@@ -1,14 +1,15 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Clock, Phone } from "lucide-react";
 
-const InstagramIcon = (props: any) => (
+const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     {...props}
     xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
+    width={props.width || "24"}
+    height={props.height || "24"}
     viewBox="0 0 24 24"
     fill="none"
     stroke="currentColor"
@@ -27,7 +28,7 @@ export default function Location() {
     <section id="location" className="py-16 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -88,7 +89,7 @@ export default function Location() {
                     <a href="https://wa.me/6285828399611" target="_blank" rel="noopener noreferrer" className="text-dinara-primary text-sm font-bold hover:underline">0858-2839-9611</a>
                     <div className="h-4 w-px bg-dinara-accent/30"></div>
                     <a href="https://www.instagram.com/dinaradental/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-dinara-primary text-sm font-bold hover:underline">
-                      <InstagramIcon size={16} />
+                      <InstagramIcon width={16} height={16} />
                       @dinaradental
                     </a>
                   </div>
@@ -97,19 +98,19 @@ export default function Location() {
             </div>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
             className="relative aspect-square md:aspect-video lg:aspect-square w-full rounded-[2.5rem] overflow-hidden shadow-xl border-8 border-dinara-light"
           >
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.046213034608!2d114.6131245!3d-3.3387778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421455f88bbcb%3A0x1ccd3c3a39e3b298!2sDinara%20Dental%20Care!5e0!3m2!1sid!2sid!4v1777259160533!5m2!1sid!2sid" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen={true} 
-              loading="lazy" 
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.046213034608!2d114.6131245!3d-3.3387778!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2de421455f88bbcb%3A0x1ccd3c3a39e3b298!2sDinara%20Dental%20Care!5e0!3m2!1sid!2sid!4v1777259160533!5m2!1sid!2sid"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={true}
+              loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Peta Lokasi Dinara Dental Care"
               className="w-full h-full grayscale hover:grayscale-0 transition-all duration-700"
