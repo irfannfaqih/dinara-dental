@@ -1,22 +1,25 @@
 "use client";
 
-import { motion } from "framer-motion";
+import Image from "next/image";
 
 const DOCTORS = [
   {
     name: "drg. Dinda Rizkia",
     specialty: "Dokter Gigi Umum",
     initials: "DR",
+    image: "/doctors/drg-dinda.jpg",
   },
   {
     name: "drg. Noor Mutiari Amalia",
     specialty: "Dokter Gigi Umum",
     initials: "NM",
+    image: "/doctors/drg-noor.jpg",
   },
   {
     name: "drg. Muhammad Syafrie Ilham",
     specialty: "Dokter Gigi Umum",
     initials: "MS",
+    image: "/doctors/drg-syafrie.jpg",
   },
 ];
 
@@ -58,27 +61,15 @@ export default function Doctors() {
               className="group"
             >
               <div className="relative bg-white/60 backdrop-blur-sm rounded-[2.5rem] border border-white/50 p-3 h-full hover:shadow-[0_20px_50px_rgba(92,64,51,0.1)] transition-all duration-500 hover:-translate-y-2 overflow-hidden shadow-sm">
-                {/* Skeleton Avatar Area */}
-                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-dinara-accent/15 flex flex-col items-center justify-center gap-4">
-                  {/* Shimmer overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-br from-dinara-accent/20 via-transparent to-dinara-primary/10 animate-pulse" />
-
-                  {/* Avatar circle with initials */}
-                  <div className="relative z-10 w-28 h-28 rounded-full bg-dinara-primary/20 border-4 border-white/60 shadow-lg flex items-center justify-center">
-                    <span className="text-3xl font-extrabold text-dinara-primary/60 select-none">
-                      {doctor.initials}
-                    </span>
-                  </div>
-
-                  {/* Skeleton lines */}
-                  <div className="relative z-10 flex flex-col items-center gap-2 px-8 w-full">
-                    <div className="w-2/3 h-3 rounded-full bg-dinara-accent/30 animate-pulse" />
-                    <div className="w-1/2 h-3 rounded-full bg-dinara-accent/20 animate-pulse" />
-                  </div>
-
-                  <p className="relative z-10 text-dinara-warm/30 text-[10px] tracking-wide mt-1">
-                    Foto segera hadir
-                  </p>
+                <div className="relative aspect-[4/5] rounded-[2rem] overflow-hidden mb-6 bg-dinara-accent/15">
+                  <Image
+                    src={doctor.image}
+                    alt={doctor.name}
+                    fill
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  />
+                  {/* Overlay gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-t from-dinara-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
                 </div>
 
                 {/* Content Area */}
