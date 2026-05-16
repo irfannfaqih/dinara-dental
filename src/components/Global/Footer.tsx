@@ -22,6 +22,23 @@ const InstagramIcon = (props: React.SVGProps<SVGSVGElement>) => (
   </svg>
 );
 
+const TikTokIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    {...props}
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.width || "24"}
+    height={props.height || "24"}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+  </svg>
+);
+
 export default function Footer() {
   return (
     <footer className="bg-dinara-dark text-white pt-16 pb-8">
@@ -46,6 +63,14 @@ export default function Footer() {
                 className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-dinara-accent transition-all duration-300"
               >
                 <InstagramIcon width={20} height={20} />
+              </a>
+              <a
+                href="https://www.tiktok.com/@dinaradental"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="h-10 w-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-dinara-accent transition-all duration-300"
+              >
+                <TikTokIcon width={20} height={20} />
               </a>
             </div>
           </div>
