@@ -24,13 +24,13 @@ export default function Hero() {
                 className="inline-flex items-center gap-2 py-1 px-3 rounded-full bg-dinara-primary/10 text-dinara-primary text-xs font-semibold"
               >
                 <CheckCircle size={14} />
-                <span>Konsultasi Gratis untuk Semua Pasien Baru</span>
+                <span>Konsultasi Gratis untuk Semua Pasien</span>
               </motion.div>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-extrabold text-dinara-dark leading-[1.1] tracking-tight">
-                Ke dokter gigi nggak harus <span className="text-dinara-primary italic">deg-degan.</span>
+                Tidak perlu merasa tegang sebelum ke dokter gigi.
               </h1>
               <p className="text-base md:text-lg text-dinara-warm max-w-lg leading-relaxed">
-                Di Dinara, kamu bisa cerita dulu sebelum periksa. Konsultasi gratis, suasana santai, dan tidak ada tindakan tanpa persetujuanmu.
+                Kami percaya rasa nyaman dimulai dari komunikasi yang baik. Anda dapat menyampaikan keluhan dan berkonsultasi terlebih dahulu secara gratis sebelum menentukan perawatan yang sesuai, tanpa tekanan dan tanpa terburu-buru.
               </p>
             </div>
 
@@ -66,18 +66,19 @@ export default function Hero() {
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="relative h-[350px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl"
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+            className="relative h-[350px] md:h-[480px] rounded-3xl overflow-hidden shadow-2xl group cursor-zoom-in"
           >
             <Image
-              src="/hero-clinic.png"
-              alt="Dinara Dental Clinic"
+              src="/hero-team.jpg"
+              alt="Dinara Dental Team"
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-1000 group-hover:scale-110"
               priority
             />
             {/* Warm Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-dinara-dark/40 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-t from-dinara-dark/40 to-transparent group-hover:opacity-0 transition-opacity duration-500" />
 
             {/* Floating Badge */}
             <div className="absolute bottom-6 left-6 bg-white/90 backdrop-blur shadow-lg rounded-2xl p-4 flex items-center gap-4">
